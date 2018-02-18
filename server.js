@@ -5,17 +5,102 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/article-one', function(req, res){
-   res.sendFile(path.join(__dirname, 'article-one.html')); 
+var articles ={
+    articleOne:{
+    articleName: 'Article One',
+    heading: 'Article One | Nishant Singh',
+    date:  '17 February 2017', 
+    content : `<p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+              <p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+              <p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+              <p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+    `
+},
+    articleTwo: {articleName: 'Article Two',
+    heading: 'Article Two | Nishant Singh',
+    date:  '17 February 2017', 
+    content : `<p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+              <p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+              <p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+              <p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+    `},
+    articleThree :{articleName: 'Article Three',
+    heading: 'Article Three | Nishant Singh',
+    date:  '17 February 2017', 
+    content : `<p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+              <p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+              <p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+              <p>
+                This is an article and I have written it myself.
+                Rate it!!
+            </p>
+    `}
+};
+
+function createTemplate(data) {
+var heading = data.heading;
+var articleName = data.articleName;
+var date = data.date;
+var content = data.content;
+var htmlTemplate = `
+<html>
+<head>
+<title>
+    ${heading}
+</title>
+</head>
+<body>
+    <div class='container'>
+        <a href='/'>Home</a>
+        <h1>${articleName}</h1>
+        <p>Date: ${date}</p>
+      ${content}
+    </div>
+</body>
+</html>
+
+`;
+    return htmlTemplate;
+}
+
+app.get('/:articleName', function(req, res){
+    var articleName = req.params.articleName;
+   res.send(createTemplate(articles[articleName])); 
 });
 
-app.get('/article-two', function(req, res){
-   res.sendFile(path.join(__dirname, 'article-two.html')); 
-});
-
-app.get('/article-three', function(req, res){
-    res.sendFile(path.join(__dirname, 'article-three.html'));
-});
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });

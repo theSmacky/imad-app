@@ -10,7 +10,9 @@ var articles ={
     articleName: 'Article One',
     heading: 'Article One | Nishant Singh',
     date:  '17 February 2017', 
-    content : `<p>
+    content : `
+    <link href= '/ui/style.css' rel = 'stylesheet'>
+    <p>
                 This is an article and I have written it myself.
                 Rate it!!
             </p>
@@ -31,7 +33,9 @@ var articles ={
     articleTwo: {articleName: 'Article Two',
     heading: 'Article Two | Nishant Singh',
     date:  '17 February 2017', 
-    content : `<p>
+    content : `
+    <link href= '/ui/style.css' rel = 'stylesheet'>
+    <p>
                 This is an article and I have written it myself.
                 Rate it!!
             </p>
@@ -51,7 +55,9 @@ var articles ={
     articleThree :{articleName: 'Article Three',
     heading: 'Article Three | Nishant Singh',
     date:  '17 February 2017', 
-    content : `<p>
+    content : `
+    <link href= '/ui/style.css' rel = 'stylesheet'>
+    <p>
                 This is an article and I have written it myself.
                 Rate it!!
             </p>

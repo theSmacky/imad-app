@@ -52,7 +52,8 @@ var articles ={
                 Rate it!!
             </p>
     `},
-    articleThree :{articleName: 'Article Three',
+    articleThree :{
+    articleName: 'Article Three',
     heading: 'Article Three | Nishant Singh',
     date:  '17 February 2017', 
     content : `
@@ -91,6 +92,7 @@ var htmlTemplate = `
 <body>
     <div class='container'>
         <a href='/'>Home</a>
+        <hr/>
         <h1>${articleName}</h1>
         <p>Date: ${date}</p>
       ${content}

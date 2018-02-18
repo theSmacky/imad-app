@@ -21,9 +21,14 @@ body {
 }
 .container{
     font-family: fira code;
-    background:grey;
+    background:lightgrey;
     padding-top: 60px;
     padding-left:80px;
     padding-right:80px;
     text-align:center;
+}
+a{
+    font-family:Helvatica;
+    color:green;
+    font-size:5px;
 }

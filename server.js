@@ -92,8 +92,8 @@ var htmlTemplate = `
 <body>
     <div class='container'>
         <a href='/'>Home</a>
-        <hr/>
         <h1>${articleName}</h1>
+        <hr/>
         <p>Date: ${date}</p>
       ${content}
     </div>

@@ -105,6 +105,7 @@ var htmlTemplate = `
 }
 var arr=[];
 app.get('/submit-name', function(req,res){
+res.header("Access-Control-Allow-Origin", "*");
 let name = req.query.name;
 arr.push(name);
 res.send(JSON.stringify(arr));

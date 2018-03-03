@@ -31,3 +31,7 @@ a{
     color:green;
     font-size:50px;
 }
+ul{
+    list-style: none;
+    list-style-position: inherit;
+}
